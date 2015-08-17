@@ -8,18 +8,12 @@ Get it on npm with:
 npm install co-views-ext
 ```
 
-# co-views
+## co-views original read me:
 
   Template rendering for [co](https://github.com/tj/co) using
   [co-render](https://github.com/tj/co-render). This module
   provides higher level sugar than co-render to reduce redundancy,
   for example specifying a views directory and default extension name.
-
-## Installation
-
-```
-$ npm install co-views
-```
 
  And install whichever engine(s) you use:
 
