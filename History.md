@@ -1,3 +1,10 @@
+1.0.1 / 2015-08-17
+==================
+
+ * added helper functionality
+ * renamed fork to co-views-ext
+ * published on NPM as co-views-ext
+
 1.0.0 / 2015-06-02
 ==================
 
