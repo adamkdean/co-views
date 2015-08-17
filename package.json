@@ -1,7 +1,7 @@
 {
-  "name": "co-views",
-  "version": "1.0.0",
-  "repository": "visionmedia/co-views",
+  "name": "co-views-ext",
+  "version": "1.0.1",
+  "repository": "adamkdean/co-views-ext",
   "description": "Higher level thunk-based template rendering for Co and others, built on co-render",
   "keywords": [
     "template",
