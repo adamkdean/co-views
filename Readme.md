@@ -46,6 +46,37 @@ $ npm install ejs jade
   Allowing you to invoke `render('user')` instead of
   `render('user.jade')`.
 
+### helpers
+
+  When using [Handlebars](http://handlebarsjs.com) as your rendering templates, Helper registration failed on older versions of [co-views](http://npmjs.org/package/co-views), but this fork allows you to pass these helpers into `views()` when exporting the `render` function. For example, if you wanted to add an authentication helper `gate` to your views:
+  
+```js
+/*
+Gate Helper, to allow use of the same views
+for both authenticated and non-authenticated users.
+
+{{gate userObj}}
+  <p>Logged In!</p>
+{{else}}
+  <p>Not Logged In!</p>
+{{/gate}}
+*/
+var gateHelper = function(user, options) {
+  if(user) {
+    return options.fn(this);
+  } else {
+    return options.inverse(this);
+  }
+};
+
+module.exports = views(__dirname + '/path/to/views', {
+  map: { html: 'handlebars' },
+  helpers: {
+    gate: gateHelper
+  }
+});
+```
+
 ### cache
 
   When __true__ compiled template functions will be cached in-memory,
