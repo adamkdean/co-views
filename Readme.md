@@ -1,3 +1,13 @@
+# co-views-ext
+
+This is a fork of co-views with the changes of co-views-helpers merged in, as co-views-helpers is out of date. Ext stands for extended.
+
+Get it on npm with:
+
+```
+npm install co-views-ext
+```
+
 # co-views
 
   Template rendering for [co](https://github.com/tj/co) using
