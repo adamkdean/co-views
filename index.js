@@ -50,6 +50,8 @@ module.exports = function(dir, opts){
   // cache compiled templates
   var cache = opts.cache;
   if (null == cache) cache = 'development' != env;
+  
+  var helpers = opts.helpers || {};
 
   return function(view, locals){
     locals = locals || {};
@@ -78,6 +80,7 @@ module.exports = function(dir, opts){
 
     // cache
     locals.cache = cache;
+    locals.helpers = helpers;
 
     locals.partials = merge({}, partials);
 
